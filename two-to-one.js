@@ -14,6 +14,9 @@ longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
 
  */
 
+
+
+// method #1
 function longest(s1, s2) {
   let result = [];
   let concatStr = s1 + s2;
@@ -36,4 +39,9 @@ function longest(s1, s2) {
   });
   
   return result.join("");
+}
+
+//method #2
+function longest(s1, s2) {
+  return Array.from(new Set(s1 + s2)).sort().join("");
 }
